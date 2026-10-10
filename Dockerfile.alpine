@@ -9,7 +9,6 @@ WORKDIR /app
 
 RUN apk add --no-cache build-base clang21-libclang pkgconf
 
-# pymupdf has no musllinux aarch64 wheel and fails to build there; only Zotero PDF extraction uses it.
 ARG TARGETARCH
 
 RUN --mount=type=cache,target=/root/.cache/uv \
